@@ -17,11 +17,12 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={30}
+        value={304545}
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
       />
+      <button className="subtotal__proceedButton">Proceed to Checkout</button>
     </div>
   );
 }

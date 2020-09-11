@@ -19,8 +19,9 @@ function Checkout() {
       </div>
 
       <div className="checkout__right">
-        <Subtotal className="checkout__subtotal" />
-        <button className="checkout__proceedButton">Proceed to Checkout</button>
+        <div className="checkout__subtotalInfo">
+          <Subtotal className="checkout__subtotal" />
+        </div>
       </div>
     </div>
   );

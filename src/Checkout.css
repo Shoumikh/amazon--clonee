@@ -9,10 +9,7 @@
 }
 
 .checkout__right {
-  width: 410px;
-  background-color: rgb(234, 237, 237);
-  padding: 18px;
-  height: min-content;
+  
 }
 
 .checkout__title {
@@ -21,11 +18,9 @@
   margin-right: 10px;
 }
 
-.checkout__proceedButton {
-  width: 400px;
-  background: #f0c14b;
-  margin-top: 10px;
-  padding: 5px;
-  margin-left: 5px;
-  border: 1px solid lightgrey;
+
+
+.checkout__subtotalInfo {
+  text-align: left;
+  width: 100%;
 }
