@@ -17,7 +17,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={2}
+        value={30}
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
