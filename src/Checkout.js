@@ -1,4 +1,5 @@
 import React from "react";
+import BasketItem from "./BasketItem";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
 
@@ -12,6 +13,13 @@ function Checkout() {
           alt=""
         />
         <h2 className="checkout__title">Your Shopping Basket</h2>
+        <BasketItem
+            id="154646344878"
+            title="The beauty qween make up set"
+            price={29.99}
+            image="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Beauty/GW/desktop/Luxury-Category-card-1x._SY304_CB448731790_.jpg"
+            rating={3}
+          />
         {/** BasketItem */}
         {/** BasketItem */}
         {/** BasketItem */}

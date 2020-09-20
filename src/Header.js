@@ -4,8 +4,10 @@ import amazon_logo from "./amazon_logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <div className="header">
       <Link to="/">
@@ -35,7 +37,7 @@ function Header() {
             <ShoppingCartOutlinedIcon className="headerOptionBasketLineOne" />
 
             <span className="header__OptionLineBasketLineTwo header__OptionLineBasketCount">
-              0
+              {basket?.length} {/*optional chaining. if this runs out any wont bother */}
             </span>
           </div>
         </Link>

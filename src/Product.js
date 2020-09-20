@@ -4,8 +4,10 @@ import Emoji from "a11y-react-emoji";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
-  const [state, dispatch] = useStateValue();
-
+  const [{ basket }, dispatch] = useStateValue();
+  
+  console.log("this is the basket", basket);
+  
   const addToBasket = () => {
     //dispatch a item into the datalayer
     dispatch({
@@ -16,9 +18,9 @@ function Product({ id, title, image, price, rating }) {
         image: image,
         price: price,
         rating: rating,
-      }
-    })
-  }
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product__info">
