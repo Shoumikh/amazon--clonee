@@ -1,9 +1,23 @@
 import React from "react";
 import BasketItem from "./BasketItem";
 import "./Checkout.css";
+import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 
 function Checkout() {
+  const [{ basket }, dispatch] = useStateValue();
+  /*const basketCart = () => {
+    basket.forEach(element => {
+      <BasketItem
+          id="1546463448748"
+          title={basket.title}
+          price={basket.price}
+          image={basket.image}
+          rating={basket.rating}
+        />
+    });
+  }*/
+
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -13,17 +27,16 @@ function Checkout() {
           alt=""
         />
         <h2 className="checkout__title">Your Shopping Basket</h2>
-        <BasketItem
-            id="154646344878"
-            title="The beauty qween make up set"
-            price={29.99}
-            image="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Beauty/GW/desktop/Luxury-Category-card-1x._SY304_CB448731790_.jpg"
-            rating={3}
+
+        {basket.map((product) => (
+          <BasketItem
+            id={product.id}
+            title={product.title}
+            price={product.price}
+            image={product.image}
+            rating={product.rating}
           />
-        {/** BasketItem */}
-        {/** BasketItem */}
-        {/** BasketItem */}
-        {/** BasketItem */}
+        ))}
       </div>
 
       <div className="checkout__right">

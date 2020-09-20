@@ -1,7 +1,8 @@
 import React from "react";
 import Emoji from "a11y-react-emoji";
+import "./BasketItem.css";
 
-function BasketItem(id, image, title, price, rating) {
+function BasketItem({ id, image, title, price, rating }) {
   return (
     <div className="basketItem">
       <div className="basketItem__left">
@@ -10,7 +11,7 @@ function BasketItem(id, image, title, price, rating) {
 
       <div className="basketItem__right">
         <div className="basketItem__info">
-          <p>{title}</p>
+          <strong>{title}</strong>
           <p className="basketItem__price">
             <small>$</small>
             <strong>{price}</strong>
@@ -22,8 +23,8 @@ function BasketItem(id, image, title, price, rating) {
                 <Emoji symbol="⭐" label="sheep" />
               ))}
           </div>
-          <button className="basketItem__button">Remove from basket</button>
         </div>
+        <button className="basketItem__button">Remove from basket</button>
       </div>
     </div>
   );
