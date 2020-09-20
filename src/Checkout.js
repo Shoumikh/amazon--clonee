@@ -6,17 +6,6 @@ import Subtotal from "./Subtotal";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
-  /*const basketCart = () => {
-    basket.forEach(element => {
-      <BasketItem
-          id="1546463448748"
-          title={basket.title}
-          price={basket.price}
-          image={basket.image}
-          rating={basket.rating}
-        />
-    });
-  }*/
 
   return (
     <div className="checkout">

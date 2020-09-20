@@ -1,8 +1,16 @@
 import React from "react";
 import Emoji from "a11y-react-emoji";
 import "./BasketItem.css";
+import { useStateValue } from "./StateProvider";
 
 function BasketItem({ id, image, title, price, rating }) {
+  const [{ basket }, dispatch] = useStateValue();
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
   return (
     <div className="basketItem">
       <div className="basketItem__left">
@@ -19,12 +27,14 @@ function BasketItem({ id, image, title, price, rating }) {
           <div className="basketItem__rating">
             {Array(rating)
               .fill()
-              .map((_, i) => (
+              .map(() => (
                 <Emoji symbol="⭐" label="sheep" />
               ))}
           </div>
         </div>
-        <button className="basketItem__button">Remove from basket</button>
+        <button onClick={removeFromBasket} className="basketItem__button">
+          Remove from basket
+        </button>
       </div>
     </div>
   );
