@@ -1,0 +1,17 @@
+.login__logo {
+  height: 40px;
+  width: 103px;
+  object-fit: contain;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+
