@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+# deployed link: https://clone-shoumikh.web.app
+
 # amazon-clone
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
