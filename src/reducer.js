@@ -1,5 +1,6 @@
 export const initialState = {
   basket: [],
+  user: null,
 };
 
 //selector
@@ -8,7 +9,6 @@ export const TotalPrice = (basket) =>
 
 //takes a state and a action (add to datalayer or get from datalayer)
 const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       //setting up unique id
@@ -21,6 +21,7 @@ const reducer = (state, action) => {
         ...state, //whatever the state originally was
         basket: [...state.basket, action.item], //..state.basket >> whatever basket currently was and whatever we decided to add
       };
+
     case "REMOVE_FROM_BASKET":
       //find the index of the first item with same action id
       const index = state.basket.findIndex(
@@ -38,6 +39,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: newBasket,
+      };
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user
       };
     default:
       return state;

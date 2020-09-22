@@ -2,6 +2,7 @@
   height: 40px;
   width: 103px;
   object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .login {
@@ -12,6 +13,75 @@
   background-color: white;
   padding-top: 10px;
   padding-bottom: 30px;
+  height: 100vh;
 }
 
+.login__infoBox {
+  width: 280px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px 30px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.login__infoBox > h2 {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
 
+.login__option > p {
+  text-align: left;
+  font-weight: 700;
+  line-height: 19px;
+  font-size: 13px;
+}
+
+.login__option {
+  display: flex;
+  flex-direction: column;
+}
+.login__option > button {
+  padding: 6px 6px;
+  margin-bottom: 10px;
+  width: 100%;
+  background: #fdcf5a;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+.login__option > input {
+  padding: 6px 6px;
+  margin-bottom: 15px;
+}
+
+.login__infoBottom {
+  text-align: left;
+  font-size: 12px;
+  padding: 10px 0px;
+}
+
+.login__help {
+  display: flex;
+  padding-top: 25px;
+}
+
+.login__help > p {
+  padding-top: 3px;
+}
+.login__newToAmazon {
+  font-size: 12px;
+  color: teal;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.login__buttonCreateAccount {
+  padding: 6px 6px;
+  width: 342px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+body {
+  background-color: snow;
+}
