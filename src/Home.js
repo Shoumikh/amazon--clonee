@@ -23,7 +23,7 @@ function Home() {
           <Product
             id="1546463448454"
             title="Haier 181 L 2 Star Direct-Cool Single Door Refrigerator (HED-1812BKS-E, Black Brushline)"
-            price={9900.36}
+            price={990.36}
             image="https://m.media-amazon.com/images/I/71mlSspS7OL._AC_UL320_.jpg"
             rating={5}
           />
@@ -56,9 +56,9 @@ function Home() {
         <div className="home__row">
           <Product
             id="154646344"
-            title="TRESemme Keratin Smooth Shampoo, 580ml"
-            price={5.0}
-            image="https://m.media-amazon.com/images/I/51qiaTcUIsL._SY250_.jpg"
+            title="Samsung CJ89 43 inch Curved UltraWide 3840 X 1200 Resolution 120Hz Monitor (LC43J890DKNXZA)"
+            price={599.0}
+            image="https://m.media-amazon.com/images/I/81v90JtbImL._AC_UY218_.jpg"
             rating={4}
           />
         </div>
