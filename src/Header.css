@@ -71,3 +71,7 @@
   margin: 0 25px;
   padding-top: 10px;
 }
+
+.header__nav a {
+  text-decoration: none;
+}

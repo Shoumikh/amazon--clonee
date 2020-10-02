@@ -8,6 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+//for stripe payment. here were are setting in the stripe api key
+const stripePromise = loadStripe(
+  "pk_pk_test_51HXw8HKWFoHhquj0OUkbZcCbs8ZxAWItvIT2YeyLZT6roE8cxAZexB8qit3XGHusHEYQiMtxA2dl0FNcFypzKa2I00fiU8oZOj"
+);
 
 function App() {
   const [state, dispatch] = useStateValue();
@@ -46,7 +53,9 @@ function App() {
           </Route>
           <Route path="/payment">
             <Header />
-            <Payment/>
+            <Elements stripe={stripePromise}>{/* this is for stripe functionality */}
+              <Payment />
+            </Elements>
           </Route>
           <Route path="/">
             <Header />
