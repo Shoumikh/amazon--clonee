@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
+import Payment from "./Payment";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "./firebase";
@@ -20,13 +21,13 @@ function App() {
         //user logged in/ user was logged in
         dispatch({
           type: "SET_USER",
-          user: authUser
+          user: authUser,
         });
       } else {
-        dispatch ({
+        dispatch({
           //user is logged out
           type: "SET_USER",
-          user: null
+          user: null,
         });
       }
     });
@@ -42,6 +43,10 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Payment/>
           </Route>
           <Route path="/">
             <Header />
