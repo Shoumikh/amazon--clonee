@@ -65,11 +65,32 @@
 
 .header__optionBasket {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
   color: white;
-  margin: 0 25px;
-  padding-top: 10px;
+  padding: 0 25px;
+  padding-top: 18px;
+}
+
+.header__optionLineCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionLineCart > span {
+  font-size: 16px;
+}
+
+.header__optionBasketIcon {
+  padding-right: 5px;
+}
+
+.header__OptionLineBasketCount {
+  color: orange;
 }
 
 .header__nav a {

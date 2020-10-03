@@ -48,12 +48,16 @@ function Header() {
         </div>
         <Link to="/checkout">
           <div className="header__optionBasket">
-            <ShoppingCartOutlinedIcon className="headerOptionBasketLineOne" />
-
-            <span className="header__OptionLineBasketLineTwo header__OptionLineBasketCount">
-              {basket?.length}{" "}
-              {/*optional chaining. if this runs out any wont bother */}
-            </span>
+            <div className="header__optionBasketIcon">
+              <ShoppingCartOutlinedIcon className="headerOptionBasketLineOne" />
+            </div>
+            <div className="header__optionLineCart">
+              <span className="header__OptionLineBasketLineTwo header__OptionLineBasketCount">
+                {basket?.length}{" "}
+                {/*optional chaining. if this runs out any wont bother */}
+              </span>
+              <strong>Cart</strong>
+            </div>
           </div>
         </Link>
       </div>

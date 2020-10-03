@@ -16,8 +16,6 @@
 .home__image {
   width: 100%;
   z-index: -1; /* behind everything else bottom layer*/
-  margin-bottom: -150px; /* elements under the picture can stay 150px */
+  margin-bottom: -220px; /* elements under the picture can stay 150px */
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-
-
